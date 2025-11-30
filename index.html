@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Movimento +Sonus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Movimento +Sonus</h1>
+            <p class="subtitle">Formulário de Inscrição Online</p>
+            <p class="required-info">Todos os campos são obrigatórios</p>
+        </header>
+
+        <form id="inscricaoForm">
+
+            <!-- Seção 1: Dados de Identificação e Contato -->
+            <section class="form-section">
+                <h2 class="section-title">Dados de Identificação e Contato</h2>
+                
+                <div class="form-group">
+                    <label for="nomeCompleto" class="required">Nome Completo</label>
+                    <input type="text" id="nomeCompleto" name="nomeCompleto" required>
+                    <span class="error-message" id="nomeCompletoError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nomeArtistico" class="required">Nome Artístico</label>
+                    <input type="text" id="nomeArtistico" name="nomeArtistico" required>
+                    <span class="error-message" id="nomeArtisticoError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="idade" class="required">Idade</label>
+                    <input type="number" id="idade" name="idade" min="1" max="120" required>
+                    <span class="error-message" id="idadeError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cidadeEstado" class="required">Cidade e Estado</label>
+                    <input type="text" id="cidadeEstado" name="cidadeEstado" required>
+                    <span class="error-message" id="cidadeEstadoError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefone" class="required">Telefone/WhatsApp</label>
+                    <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                    <span class="error-message" id="telefoneError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="required">E-mail</label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="instagram" class="required">Link do Instagram</label>
+                    <input type="url" id="instagram" name="instagram" placeholder="https://www.instagram.com/seu_perfil" required>
+                    <span class="error-message" id="instagramError"></span>
+                </div>
+            </section>
+            
+            <!-- Seção 2: Dados Artísticos e Preferências -->
+            <section class="form-section">
+                <h2 class="section-title">Dados Artísticos e Preferências</h2>
+                
+                <div class="form-group">
+                    <label class="required">Qual o seu gênero musical?</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="arrocha" name="generoMusical" value="Arrocha">
+                            <label for="arrocha">Arrocha</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="trap" name="generoMusical" value="Trap">
+                            <label for="trap">Trap</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="funk" name="generoMusical" value="Funk">
+                            <label for="funk">Funk</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="rap" name="generoMusical" value="Rap">
+                            <label for="rap">Rap</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="outros" name="generoMusical" value="Outros">
+                            <label for="outros">Outros</label>
+                            <input type="text" id="outrosEspecificacao" name="outrosEspecificacao" placeholder="Especifique" class="outros-input">
+                        </div>
+                    </div>
+                    <span class="error-message" id="generoMusicalError"></span>
+                </div>
+            </section>
+            
+            <!-- Seção 3: Escolha da Vertente do Movimento +Sonus -->
+            <section class="form-section">
+                <h2 class="section-title">Escolha da Vertente do Movimento +Sonus</h2>
+                
+                <div class="form-group">
+                    <label class="required">Para qual movimento +Sonus você está se inscrevendo?</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="arrochaMovimento" name="vertente" value="+Arrocha" required>
+                            <label for="arrochaMovimento">+Arrocha</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="urbano" name="vertente" value="+Urbano">
+                            <label for="urbano">+Urbano</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="diversidade" name="vertente" value="+Diversidade">
+                            <label for="diversidade">+Diversidade</label>
+                        </div>
+                    </div>
+                    <span class="error-message" id="vertenteError"></span>
+                </div>
+            </section>
+            
+            <!-- SEÇÃO 4: Envio de Material e Referência -->
+            <section class="form-section">
+                <h2 class="section-title">Envio de Material e Referência</h2>
+                
+                <div class="form-group">
+                    <label for="videoApresentacao" class="required">Envio do Vídeo de Apresentação</label>
+                    <p class="instruction-text">
+                        O candidato deve fornecer o link de acesso ao vídeo de apresentação. 
+                        O vídeo deve estar hospedado em plataformas de fácil acesso, como 
+                        Google Drive (com permissão de acesso liberada) ou YouTube (link direto).
+                    </p>
+                    <input type="url" id="videoApresentacao" name="videoApresentacao" placeholder="https://..." required>
+                    <span class="error-message" id="videoApresentacaoError"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comoConheceu" class="required">Como conheceu o movimento +Sonus?</label>
+                    <select id="comoConheceu" name="comoConheceu" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="MidiasSociais">Mídias Sociais</option>
+                        <option value="Indicacao">Indicação</option>
+                        <option value="Evento">Evento</option>
+                        <option value="Amigos">Amigos</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                    <input type="text" id="outrosComoConheceu" name="outrosComoConheceu" placeholder="Especifique como conheceu" class="outros-input" style="display: none; margin-top: 10px;">
+                    <span class="error-message" id="comoConheceuError"></span>
+                </div>
+            </section>
+            
+            <!-- SEÇÃO 5: Termos de Participação e Confirmação -->
+            <section class="form-section">
+                <h2 class="section-title">Termos de Participação e Confirmação</h2>
+                
+                <div class="terms">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos" class="required">
+                        Li e concordo com os 
+                        <a href="termos.html" target="_blank" class="termos-link">Termos de Participação e Regulamento do Movimento +Sonus</a>.
+                    </label>
+                </div>
+                <span class="error-message" id="termosError"></span>
+                
+                <button type="submit" class="btn-submit">Enviar Inscrição</button>
+                
+                <div id="successMessage" class="success-message">
+                    <h3>🎉 INSCRIÇÃO CONFIRMADA! 🎉</h3>
+                    <p>Seu formulário de participação para o Movimento +Sonus foi enviado com sucesso.</p>
+                    <p>Você receberá uma confirmação no e-mail fornecido com os próximos passos. Agradecemos seu interesse em fazer parte do nosso movimento!</p>
+                </div>
+            </section>
+        </form>
+        
+        <footer>
+            <p>Sonus Group &copy; 2025 - Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
